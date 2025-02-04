@@ -1,0 +1,307 @@
+Daniel Blanco
+Project Definition Assignment
+ECET 430-002
+Professor Hansis
+1/28/2025
+
+
+Project 1 Definition Child Pick-Up and Location Tracking System with RFID:
+
+Purpose
+•	What is this going to do for the user?
+o	Ensure the safe pick-up of children by pairing them with the correct parent using RFID authentication.
+o	Provide real-time location tracking using BLE to locate the child in a designated area.
+•	Why are we making this?
+o	To enhance security and efficiency in child pick-up processes at schools, daycare centers, and other facilities.
+o	To reduce errors and delays associated with manual pick-up systems.
+•	What are the top usage scenarios / user stories?
+o	A parent picks up their child and authenticates their identity via an RFID tag.
+o	A staff member locates a child quickly within the premises using BLE tracking.
+o	Unauthorized attempts trigger alerts, ensuring security.
+
+Client
+•	Contact Information
+o	Name: [To be determined]
+o	Email: [To be determined]
+o	Phone: [To be determined]
+•	Roles
+o	Project Sponsor: Oversees goals and outcomes.
+o	Developer Team: Responsible for hardware and software implementation.
+o	End User: Parents, staff, and children.
+•	Budget
+o	Estimated: $500–$1000, accounting for prototyping, components, and PCB manufacturing.
+
+Communication
+•	Repository
+o	GitHub Repository: [URL Placeholder for version control and code storage].
+•	Logbook
+o	Physical and digital logbook for documenting meeting notes, changes, and testing results.
+
+Objectives
+•	High Level
+o	Build a compact and portable system for secure child pick-up and location tracking.
+•	Descriptions
+o	RFID authentication ensures correct parent-child matches.
+o	BLE tracking provides location updates.
+o	LEDs, buzzer, and OLED display provide visual and auditory feedback.
+•	Drawings
+o	Block diagrams of hardware and signal flows.
+•	Brochure
+o	Create a marketing one-pager explaining features and benefits.
+•	Models
+o	Prototype using Arduino Nano, RC522 RFID module, HM-10 BLE module, and SSD1306 OLED.
+
+Scenario
+•	User Interaction Stories
+o	Unboxing: Open the kit containing the RFID tag, receiver module, and instructions.
+o	Configuring: Pair child and parent RFID tags and test BLE connectivity.
+o	Using: Scan RFID tags, confirm matches, and monitor the child’s proximity.
+o	Troubleshooting: Resolve issues like RFID misreads or BLE connectivity failures.
+o	Passive/Active Interaction: Active scanning and passive location monitoring.
+o	Servicing: Replace batteries or recalibrate RFID/BLE systems.
+
+User Interface
+•	Displays
+o	1.3" OLED shows status messages (e.g., "Match Successful," "Access Denied").
+•	Buttons
+o	Reset button for reinitializing the system.
+•	Switches
+o	Power toggle for energy-saving mode.
+•	Indicators
+o	LEDs: Green for success, red for failure.
+o	Buzzer: Audio alerts for errors or warnings.
+
+User Acceptance
+•	Given-When-Then Criteria
+o	Given the parent and child RFID tags, when scanned, then the system confirms the match.
+o	Given the BLE tracking module, when queried, then the system provides location proximity.
+•	Quantifiable Goals
+o	RFID match accuracy: >95%.
+o	BLE tracking range: 10–30 meters with a <3-meter error margin.
+
+Parameters
+•	Technical
+o	Dimensions: PCB size < 10x10 cm.
+o	Weight: <150g.
+o	EMC/EMI: Meets FCC Part 15 standards.
+o	Protection: Basic shielding for outdoor environments.
+•	Functions
+o	Core: RFID authentication, BLE tracking, alert system.
+•	Integration
+o	Interfaces: SPI (RFID), I2C (OLED), Serial (BLE).
+o	Protocols: UART for BLE communication.
+•	Operational
+o	Restrictions: Indoors or in predefined outdoor zones.
+o	Duty Cycle: 8 hours on a single charge.
+•	Regulatory
+o	Compliance with child safety and wireless communication laws.
+
+Life Cycle
+•	Manufacturing
+o	PCB manufactured by JLCPCB or PCBWay.
+•	Programming
+o	Preloaded Arduino code for ease of deployment.
+•	Tracking
+o	Device tagged with a unique ID for inventory purposes.
+•	Service
+o	Replaceable batteries and firmware updates.
+•	Associated Services
+o	BLE-based mobile app for tracking.
+
+Environment
+•	Temperatures
+o	Operating range: 0–50°C.
+•	Hazards
+o	Must withstand minor drops and spills.
+•	Ingress
+o	Dust and splash-resistant design.
+•	Power
+o	Rechargeable lithium-ion battery or USB-C power supply.
+
+Starting Point
+•	Existing IP
+o	Arduino Nano, RFID, and BLE modules as proven off-the-shelf components.
+•	Existing Prototypes
+o	Bench-tested modules for RFID authentication and BLE tracking.
+
+Key Concerns
+•	Most Important
+o	RFID matching reliability.
+o	BLE signal stability in crowded environments.
+•	Set-in-Stone Parameters
+o	Compact design, simple user interface, and low-cost production.
+
+Future
+•	Plans
+o	Add ultra-wideband (UWB) for precise indoor tracking.
+o	Develop cloud integration for real-time data storage.
+•	Ideas
+o	Include additional sensors (e.g., temperature, heartbeat) for safety monitoring.
+
+Glossary
+•	RFID: Radio-frequency identification.
+•	BLE: Bluetooth Low Energy.
+•	RSSI: Received Signal Strength Indicator.
+
+Open Questions
+•	Should we include mobile app development within this budget and timeline?
+•	What specific BLE range and accuracy does the client expect?
+•	Are there any branding or aesthetic requirements for the device?
+
+
+
+
+
+
+
+
+
+
+
+Project 2 Definition RFID-Enabled Litter Box Access System for House Cats:
+
+
+Purpose
+•	What is this going to do for the user?
+o	Restrict access to a litter box for a house cat while preventing entry by a pet dog, ensuring cleanliness and privacy for the cat.
+•	Why are we making this?
+o	To solve the common problem of dogs getting into litter boxes, which can cause messes and potential health issues.
+o	To provide pet owners with a smart, reliable, and low-maintenance solution.
+•	What are the top usage scenarios / user stories?
+o	A house cat approaches the litter box, and the system recognizes its unique RFID tag, unlocking access.
+o	A pet dog attempts to access the litter box, but the system denies entry, keeping the litter box secure.
+o	An owner can replace or update the RFID tag easily if needed.
+
+Client
+•	Contact Information
+o	Name: [To be determined]
+o	Email: [To be determined]
+o	Phone: [To be determined]
+•	Roles
+o	Project Sponsor: Pet product company or individual pet owner.
+o	Development Team: Engineers responsible for PCB design and system integration.
+o	End User: Pet owners with both cats and dogs.
+•	Budget
+o	Estimated: $250–$500 for prototyping and initial deployment.
+
+Communication
+•	Repository
+o	GitHub Repository: [URL Placeholder for version control and firmware storage].
+•	Logbook
+o	A physical or digital log for documenting hardware, software changes, and test results.
+
+Objectives
+•	High Level
+o	Create a smart access-controlled litter box using RFID for cat identification and an automated locking mechanism.
+•	Descriptions
+o	An RFID-enabled door unlocks only when a cat with a valid tag approaches.
+o	Audible and visual feedback informs the user and pets of system status (e.g., unlocked or access denied).
+o	Compact and durable design suitable for home environments.
+•	Drawings
+o	Include system block diagrams and PCB schematics showing connections between RFID module, locking mechanism, and microcontroller.
+•	Brochure
+o	Marketing material explaining features like "Dog-Proof," "RFID-Based," and "Pet-Friendly Design."
+•	Models
+o	Functional prototype with a working locking door and RFID tag interaction.
+
+Scenario
+•	User Interaction Stories
+o	Unboxing: Open the kit containing the smart litter box door, RFID collar tag for the cat, and instructions.
+o	Configuring: Assign the RFID tag to the system (optional pre-paired configuration).
+o	Using: Cat approaches, the system unlocks the door for access. It automatically locks after use.
+o	Troubleshooting: Owner can manually reset the system or replace the tag if needed.
+o	Passive/Active Interaction: Active unlocking for valid tags, passive denial for invalid tags.
+o	Servicing: Replace batteries or recalibrate the RFID reader as needed.
+
+User Interface
+•	Displays
+o	Optional OLED or LED indicators showing system status (e.g., "Unlocked," "Access Denied," "Low Battery").
+•	Buttons
+o	Reset button to recalibrate or pair a new RFID tag.
+•	Switches
+o	Power toggle for the system.
+•	Indicators
+o	Green LED: Access granted.
+o	Red LED: Access denied.
+o	Buzzer: Audible feedback for denied entry or error conditions.
+
+User Acceptance
+•	Given-When-Then Criteria
+o	Given the RFID collar tag is assigned to a cat, when the cat approaches, then the door unlocks.
+o	Given an unregistered RFID tag or no tag, when an animal approaches, then the system denies access and keeps the door locked.
+•	Quantifiable Goals
+o	RFID recognition accuracy: >98%.
+o	Door unlocking response time: <1 second.
+o	Battery life: At least 1 month of typical use.
+
+Parameters
+•	Technical
+o	Dimensions: Door module fits standard litter box openings (~8” x 10”).
+o	Weight: Lightweight module (<500g).
+o	EMC/EMI: Ensures no interference with other home devices.
+o	Protection: Durable materials to withstand wear and tear from pets.
+•	Functions
+o	Core: RFID authentication, door locking/unlocking, feedback system.
+•	Integration
+o	Interfaces: SPI (RFID), GPIO (locking mechanism), I2C (OLED or LED control).
+o	Protocols: N/A.
+•	Operational
+o	Restrictions: Indoor use only.
+o	Duty Cycle: Continuous operation with intermittent locking/unlocking.
+•	Regulatory
+o	Compliance with pet safety standards and FCC wireless communication rules.
+
+Life Cycle
+•	Manufacturing
+o	Custom PCB design fabricated by PCB manufacturers like JLCPCB or PCBWay.
+•	Programming
+o	Pre-programmed microcontroller with firmware to handle RFID and locking mechanisms.
+•	Tracking
+o	Devices shipped with a unique serial number for inventory and warranty tracking.
+•	Service
+o	Replaceable parts, including lock motors and RFID reader modules.
+•	Associated Services
+o	Customer support for troubleshooting and additional RFID tags.
+
+Environment
+•	Temperatures
+o	Operating range: 10–40°C (suitable for indoor environments).
+•	Hazards
+o	Resistant to scratches, accidental bumps, and minor spills.
+•	Ingress
+o	Dust and splash-resistant.
+•	Power
+o	Battery-powered (rechargeable lithium-ion) or plug-in power adapter.
+
+Starting Point
+•	Existing IP
+o	Standard RFID modules (e.g., RC522) and servo motors for locking mechanisms.
+•	Existing Prototypes
+o	Concept tested with basic Arduino setup for RFID authentication.
+
+Key Concerns
+•	Most Important
+o	Reliable RFID tag recognition for cats of all sizes.
+o	Secure locking mechanism that prevents dogs from bypassing it.
+•	Set-in-Stone Parameters
+o	Must fit standard litter box sizes.
+o	Simple setup for users without technical expertise.
+
+Future
+•	Plans
+o	Develop an app-based interface for configuration and monitoring.
+o	Add BLE functionality for tracking pet activity near the litter box.
+•	Ideas
+o	Integrate additional sensors to monitor litter box usage and send alerts (e.g., full or unused litter).
+o	Allow multi-cat configurations for households with multiple pets.
+
+Glossary
+•	RFID: Radio-frequency identification for tag-based authentication.
+•	EMC: Electromagnetic compatibility to avoid interference with other electronics.
+•	EMI: Electromagnetic interference.
+
+Open Questions
+•	How will pet owners prefer to attach RFID tags (collars, embedded in a harness, or other methods)?
+•	Should the system include manual override controls for emergencies?
+•	What aesthetic design features would appeal most to pet owners?
+
